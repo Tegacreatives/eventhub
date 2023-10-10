@@ -6,7 +6,7 @@ export const theme = {
   "color-primary-200": "#BBC5FF",
   "color-primary-300": "#99A7FF",
   "color-primary-400": "#808FFF",
-  "color-primary-500": "#5669FF",
+  "color-primary-500": "#4A43EC",
   "color-primary-600": "#3E4EDB",
   "color-primary-700": "#2B37B7",
   "color-primary-800": "#1B2493",

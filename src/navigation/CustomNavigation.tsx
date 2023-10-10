@@ -15,7 +15,7 @@ const HomeRoute = () => {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: theme["color-primary-500"],
-        tabBarStyle: { height: 90 },
+        tabBarStyle: { paddingBottom: 25, height: 80, paddingTop: 10 },
       }}
     >
       <Tab.Screen
@@ -40,10 +40,30 @@ const HomeRoute = () => {
         name="New Event"
         component={SavedScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons name="add-box" size={35} color={color} />
+          tabBarIcon: () => (
+            <MaterialIcons
+              name="add-box"
+              size={30}
+              color="white"
+              style={{
+                position: "absolute",
+                overflow: "hidden",
+                top: -40,
+                padding: 14,
+                borderRadius: 30,
+                backgroundColor: theme["color-primary-500"],
+                shadowColor: "#4A43EC", // Shadow color
+                shadowOffset: { width: 0, height: 8 }, // Shadow offset
+                shadowOpacity: 0.25, // Shadow opacity
+                shadowRadius: 20, // Shadow radius
+                elevation: 5, // Elevation for Android (ignored on iOS)
+              }}
+            />
           ),
           tabBarLabel: "",
+          tabBarLabelStyle: {
+            display: "none",
+          },
         }}
       />
       <Tab.Screen

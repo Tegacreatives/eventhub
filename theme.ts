@@ -1,4 +1,7 @@
-{
+import { light } from "@eva-design/eva";
+export const theme = {
+  ...light,
+  "color-gray": "#F9F5F6",
   "color-primary-100": "#DDE2FF",
   "color-primary-200": "#BBC5FF",
   "color-primary-300": "#99A7FF",
@@ -43,5 +46,5 @@
   "color-danger-600": "#DB2A33",
   "color-danger-700": "#B71D31",
   "color-danger-800": "#93122E",
-  "color-danger-900": "#7A0B2C"
-}
+  "color-danger-900": "#7A0B2C",
+};

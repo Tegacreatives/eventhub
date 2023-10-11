@@ -1,11 +1,21 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, StatusBar, TextInput } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { HEADERHEIGHT } from "../../constants";
 import { theme } from "../../theme";
 
+import Categories from "./Categories";
+import Searchbar from "./SearchBar";
+import { useState } from "react";
+
 const ExploreHeader = () => {
+  const [clicked, setClicked] = useState(false);
+  const [searchPhrase, setSearchPhrase] = useState("");
   return (
     <View style={styles.headerContainer}>
+      <StatusBar
+        barStyle={"light-content"}
+        backgroundColor={theme["color-primary-500"]}
+      />
       <View style={styles.nav}>
         <View>
           <Feather name="menu" size={30} color="white" />
@@ -19,6 +29,13 @@ const ExploreHeader = () => {
           <Feather name="bell" size={20} color="white" />
         </View>
       </View>
+      <Searchbar
+        clicked={clicked}
+        setClicked={setClicked}
+        searchPhrase={searchPhrase}
+        setSearchPhrase={setSearchPhrase}
+      />
+      <Categories />
     </View>
   );
 };
@@ -30,7 +47,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: theme["color-primary-500"],
     paddingTop: HEADERHEIGHT,
-    paddingVertical: "35%",
+    paddingVertical: "10%",
     overflow: "hidden",
     borderBottomRightRadius: 40,
     borderBottomLeftRadius: 40,

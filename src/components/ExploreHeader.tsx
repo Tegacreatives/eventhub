@@ -11,30 +11,32 @@ const ExploreHeader = () => {
   const [clicked, setClicked] = useState(false);
   const [searchPhrase, setSearchPhrase] = useState("");
   return (
-    <View style={styles.headerContainer}>
-      <StatusBar
-        barStyle={"light-content"}
-        backgroundColor={theme["color-primary-500"]}
-      />
-      <View style={styles.nav}>
-        <View>
-          <Feather name="menu" size={30} color="white" />
+    <View>
+      <View style={styles.headerContainer}>
+        <StatusBar
+          barStyle={"light-content"}
+          backgroundColor={theme["color-primary-500"]}
+        />
+        <View style={styles.nav}>
+          <View>
+            <Feather name="menu" size={30} color="white" />
+          </View>
+          <View style={styles.locationStyles}>
+            <Text style={styles.topTextStyle}>Current Location</Text>
+            <Text style={styles.textStyle}>New York, USA</Text>
+          </View>
+          <View style={styles.noticeStyle}>
+            <View style={styles.noticeDot}></View>
+            <Feather name="bell" size={20} color="white" />
+          </View>
         </View>
-        <View style={styles.locationStyles}>
-          <Text style={styles.topTextStyle}>Current Location</Text>
-          <Text style={styles.textStyle}>New York, USA</Text>
-        </View>
-        <View style={styles.noticeStyle}>
-          <View style={styles.noticeDot}></View>
-          <Feather name="bell" size={20} color="white" />
-        </View>
+        <Searchbar
+          clicked={clicked}
+          setClicked={setClicked}
+          searchPhrase={searchPhrase}
+          setSearchPhrase={setSearchPhrase}
+        />
       </View>
-      <Searchbar
-        clicked={clicked}
-        setClicked={setClicked}
-        searchPhrase={searchPhrase}
-        setSearchPhrase={setSearchPhrase}
-      />
       <Categories />
     </View>
   );

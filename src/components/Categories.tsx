@@ -26,7 +26,7 @@ const categories = [
     icon: require("../../assets/icons/food.png"),
   },
   {
-    name: "Games",
+    name: "Art",
     color: "#46CDFB",
     icon: require("../../assets/icons/art.png"),
   },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
     paddingVertical: 15,
-    marginHorizontal: 10,
+    marginHorizontal: 8,
     borderRadius: 30,
   },
   text: {

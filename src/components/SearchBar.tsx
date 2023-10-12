@@ -4,7 +4,6 @@ import {
   TextInput,
   View,
   Keyboard,
-  Button,
   Text,
   TouchableOpacity,
 } from "react-native";
@@ -72,12 +71,16 @@ const SearchBar: FC<SearchBarProps> = ({
           </TouchableOpacity>
         </View>
       ) : (
-        <View style={styles.filterStyle}>
+        <TouchableOpacity style={styles.filterStyle}>
           <View style={styles.filterIconStyle}>
-            <MaterialIcons name="filter-list" size={20} color={"white"} />
+            <MaterialIcons
+              name="filter-list"
+              size={20}
+              color={theme["color-primary-500"]}
+            />
           </View>
           <Text style={styles.filterTextStyle}>Filters</Text>
-        </View>
+        </TouchableOpacity>
       )}
     </View>
   );
@@ -87,7 +90,7 @@ export default SearchBar;
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 15,
+    paddingVertical: 18,
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",

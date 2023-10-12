@@ -7,7 +7,7 @@ import UpcomingEvents from "../components/UpcomingEvents";
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <ExploreHeader />
       <UpcomingEvents />
     </View>
@@ -18,6 +18,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: HEADERHEIGHT,
+    backgroundColor: "0px 8px 30px rgba(80, 85, 136, 0.06);",
+    flex: 1,
   },
 });

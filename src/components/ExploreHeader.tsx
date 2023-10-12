@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, StatusBar, TextInput } from "react-native";
-import { Feather } from "@expo/vector-icons";
+import { Feather, FontAwesome } from "@expo/vector-icons";
 import { HEADERHEIGHT } from "../../constants";
 import { theme } from "../../theme";
 
@@ -22,7 +22,10 @@ const ExploreHeader = () => {
             <Feather name="menu" size={30} color="white" />
           </View>
           <View style={styles.locationStyles}>
-            <Text style={styles.topTextStyle}>Current Location</Text>
+            <View style={styles.locationContainer}>
+              <Text style={styles.topTextStyle}>Current Location</Text>
+              <FontAwesome name="caret-down" color={"white"} size={20} />
+            </View>
             <Text style={styles.textStyle}>New York, USA</Text>
           </View>
           <View style={styles.noticeStyle}>
@@ -88,7 +91,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+  locationContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
   topTextStyle: {
     color: theme["color-primary-100"],
+    marginRight: 5,
   },
 });

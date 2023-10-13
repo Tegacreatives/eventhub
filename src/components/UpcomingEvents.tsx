@@ -16,6 +16,6 @@ export default UpcomingEvents;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 70,
+    marginTop: 60,
   },
 });

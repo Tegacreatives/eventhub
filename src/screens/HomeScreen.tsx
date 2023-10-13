@@ -1,16 +1,18 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React from "react";
 import { HEADERHEIGHT } from "../../constants";
 import { theme } from "../../theme";
 import ExploreHeader from "../components/ExploreHeader";
 import UpcomingEvents from "../components/UpcomingEvents";
+import Ad from "../components/Ad";
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <ExploreHeader />
       <UpcomingEvents />
-    </View>
+      <Ad />
+    </ScrollView>
   );
 };
 

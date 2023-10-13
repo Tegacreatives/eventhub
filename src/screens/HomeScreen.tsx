@@ -9,7 +9,7 @@ import NearByEvents from "../components/NearByEvents";
 
 const HomeScreen = () => {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       <ExploreHeader />
       <UpcomingEvents />
       <Ad />

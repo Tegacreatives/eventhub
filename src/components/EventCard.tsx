@@ -20,9 +20,9 @@ const events = [
   },
   {
     id: "2",
-    name: "International Band Music",
-    image: require("../../assets/images/brandmusic.png"),
-    location: "36 Guild Street London, UK",
+    name: "Jo Malone London's Festival",
+    image: require("../../assets/images/joma.png"),
+    location: "Radio's Gallery Santa Cruis, CA",
     date: "10 June",
   },
   {
@@ -103,10 +103,11 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    paddingRight: 14,
   },
   locationTextStyles: {
     color: theme["color-gray"],
     fontSize: 18,
-    marginLeft: 5,
+    marginLeft: 8,
   },
 });

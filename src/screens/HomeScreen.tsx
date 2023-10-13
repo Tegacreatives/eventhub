@@ -5,6 +5,7 @@ import { theme } from "../../theme";
 import ExploreHeader from "../components/ExploreHeader";
 import UpcomingEvents from "../components/UpcomingEvents";
 import Ad from "../components/Ad";
+import NearByEvents from "../components/NearByEvents";
 
 const HomeScreen = () => {
   return (
@@ -12,6 +13,7 @@ const HomeScreen = () => {
       <ExploreHeader />
       <UpcomingEvents />
       <Ad />
+      <NearByEvents />
     </ScrollView>
   );
 };

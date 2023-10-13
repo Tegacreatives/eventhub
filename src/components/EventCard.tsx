@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: "#fff",
     borderRadius: 15,
-    height: 335,
+    height: 305,
     width: 287,
   },
   eventContentStyles: {

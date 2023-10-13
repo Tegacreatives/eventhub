@@ -39,10 +39,11 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   inviteTextStyles: {
-    fontSize: 30,
+    fontSize: 26,
+    fontWeight: "600",
   },
   discountTestStyles: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "300",
     marginVertical: 8,
   },

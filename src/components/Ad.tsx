@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
+import { Button } from "@ui-kitten/components";
 
 const Ad = () => {
   return (
@@ -7,9 +8,14 @@ const Ad = () => {
       <View style={styles.textContainer}>
         <Text style={styles.inviteTextStyles}>Invite your friends</Text>
         <Text style={styles.discountTestStyles}>Get $20 for your ticket</Text>
-        <TouchableOpacity style={styles.inviteButtonStyles}>
-          <Text style={styles.inviteButtonTextStyles}>INVITE</Text>
-        </TouchableOpacity>
+        <Button
+          style={styles.inviteButtonStyles}
+          appearance="filled"
+          status="info"
+          size="medium"
+        >
+          INVITE
+        </Button>
       </View>
       <Image
         style={styles.imageStyles}
@@ -48,13 +54,12 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   inviteButtonStyles: {
-    backgroundColor: "#00F8FF",
+    //backgroundColor: "#00F8FF",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     width: 100,
     height: 40,
-    borderRadius: 8,
   },
   inviteButtonTextStyles: {
     fontSize: 18,
